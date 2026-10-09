@@ -2,6 +2,8 @@
 import os
 import psycopg
 from psycopg.rows import dict_row
+from dotenv import load_dotenv
+load_dotenv()
 
 DATABASE_URL = os.environ["DATABASE_URL"]
 
@@ -29,5 +31,6 @@ def initialize_db():
 
 
 
-
+if __name__ == "main":
+    initialize_db()
 
