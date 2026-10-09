@@ -15,3 +15,11 @@ def get_task_id_by_title(title: str):
         ).fetchall()
 
         return [dict(row) for row in rows]
+
+
+
+if __name__ == "__main__":
+    result = get_task_id_by_title("Learn MCP")
+
+    print("Task ID search result:")
+    print(result)
